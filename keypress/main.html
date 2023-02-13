@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflejos con flechas</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h2 id="title">Press spacebar to start !</h2>
+<br>
+
+<p id="demo"></p>
+<br>
+
+<p id="demo2"></p>
+
+    <script>
+            document.addEventListener("keydown", event => {
+            if (event.code === 'Space' || event.key === 32 || event.key === ' '){
+                document.getElementById("demo").innerHTML = "Funcionando";
+                
+            setInterval(function flechas() {
+                let imgArray = ['flechaDer.jpg', 'flechaIzq.jpg']; 
+                let num = Math.floor(Math.random() * imgArray.length);
+                document.getElementById("demo2").innerHTML = '<img src="' + imgArray[num] + '" width="100px">';
+            }, 1000);
+            
+            }});
+    const title = document.getElementById("title");
+    setInterval(() => {
+      title.style.fontSize = 900;
+    }, 700);        
+    </script>
+    
+</body>
+
+</html>
