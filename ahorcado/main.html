@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+</head>
+<body onload="guiones()">
+
+    <h1>JUEGO DEL AHORCADO</h1>
+        
+    <div id="ahorcado"><img src="penjat/0.jpg" width="230px" height="265px"></div>
+    
+    <div id="palabraOculta"></div>
+
+    <input type="text" maxlength="1" id="letras" placeholder="Introduce una letra">&nbsp;
+    <button onclick="verificarLetra()">Enviar</button>&nbsp;
+    <button onclick="window.location.reload();">Reset Game</button>
+
+</body>
+</html>
