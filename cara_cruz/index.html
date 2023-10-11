@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+
+    <h2>Juego de cara o cruz, 1 ganamos 2 perdemos.</h2>
+
+    <button onclick="num_random()">Click</button>
+    <p id="result"></p>
+    <p id="imagen"></p>
+    <script>
+
+        function num_random(){
+            var number = Math.floor(Math.random(1 - 3) * 3);
+
+            if(number == 1){
+                document.getElementById("imagen").innerHTML = "<img src= './cara.jpg' alt='cara.jpg' width='150px' height='150px'>"
+                document.getElementById("result").innerHTML = "Cara, has ganado!";
+            }else{
+                document.getElementById("imagen").innerHTML = "<img src= './cruz.jpg' alt='cruz.jpg' width='150px' height='150px'>"
+
+                document.getElementById("result").innerHTML = "Cruz, has perdido!";
+            }
+        }
+    </script>
+    
+</body>
+</html>
